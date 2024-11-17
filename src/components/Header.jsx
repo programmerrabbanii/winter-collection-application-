@@ -1,16 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import navLogo from "../assets/istockphoto-1450747978-612x612.jpg"
 
 const Header = () => {
     const links=<>
-    <li className="ml-2"><NavLink to="/">Home</NavLink></li>
-    <li className="ml-2"><NavLink to="/donation">Donation</NavLink></li>
-    <li className="ml-2"><NavLink to="/help">How To Help</NavLink></li>
-    <li className="ml-2"><NavLink to="/dashboard">dashboard</NavLink></li>
+    <li className="ml-2 text-lg font-semibold"><NavLink to="/">Home</NavLink></li>
+    <li className="ml-2 text-lg font-semibold"><NavLink to="/donation">Donation</NavLink></li>
+    <li className="ml-2 text-lg font-semibold"><NavLink to="/help">How To Help</NavLink></li>
+    <li className="ml-2 text-lg font-semibold"><NavLink to="/dashboard">dashboard</NavLink></li>
     
     </>
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,7 +39,7 @@ const Header = () => {
               }
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link to="/"><img className="h-20" src={navLogo} alt="" /></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -48,11 +49,11 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">Login</a>
         </div>
       </div>
     </div>
   );
-};
+}; 
 
 export default Header;
