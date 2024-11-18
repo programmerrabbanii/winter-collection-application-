@@ -1,8 +1,13 @@
+import About from "../components/About";
+import Bannar from "../components/Bannar";
+import DonationInfo from "../components/DonationInfo";
+
 const Home = () => {
     return (
         <div>
-            <h4>this home</h4>
-            
+           <Bannar></Bannar>     
+           <About></About>       
+           <DonationInfo></DonationInfo>
         </div>
     );
 };
