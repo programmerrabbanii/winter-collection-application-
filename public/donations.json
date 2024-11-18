@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Winter Clothing Drive - Dhaka",
+      "image": "https://i.ibb.co.com/L9Q3HRq/poor-child-landfill-looks-forward-with-hope.jpg",
+      "description": "Join us in our mission to provide warm clothing to the less fortunate in Dhaka during the harsh winter months. Your donations can bring warmth and hope to many people in need.",
+      "status": "Ongoing",
+      "contactInfo": "Email: dhaka@winterdrive.org | Phone: +880 1234 567 890",
+      "division": "Dhaka"
+    },
+    {
+      "id": 2,
+      "title": "Chittagong Winter Aid Campaign",
+      "image":"https://i.ibb.co.com/YQLNY2X/arab-people-demonstrating-together.jpg",
+      "description": "This winter, let’s help the people of Chittagong by donating warm clothes, blankets, and other essentials. Together, we can make a real difference in the lives of the underprivileged.",
+      "status": "Ongoing",
+      "contactInfo": "Email: chittagong@winterdrive.org | Phone: +880 9876 543 210",
+      "division": "Chittagong"
+    },
+    {
+      "id": 3,
+      "title": "Khulna Winter Clothing Drive",
+      "image": "https://i.ibb.co.com/hXkb5J2/children-receiving-gifts-from-elders-medium-shot.jpg",
+      "description": "We are collecting donations of winter clothing for people in need in Khulna. Your generosity will help provide warmth and comfort to those who are struggling in the cold.",
+      "status": "Ongoing",
+      "contactInfo": "Email: khulna@winterdrive.org | Phone: +880 1122 334 455",
+      "division": "Khulna"
+    },
+    {
+      "id": 4,
+      "title": "Sylhet Winter Relief Campaign",
+      "image": "https://i.ibb.co.com/LdV6vCd/arab-people-demonstrating-together-1.jpg",
+      "description": "Winter can be especially tough for the people in Sylhet. Help us by donating clothing and blankets to those who are facing the cold weather without enough warmth.",
+      "status": "Upcoming",
+      "contactInfo": "Email: sylhet@winterdrive.org | Phone: +880 2233 445 566",
+      "division": "Sylhet"
+    },
+    {
+      "id": 5,
+      "title": "Rajshahi Winter Warmth Campaign",
+      "image": "https://i.ibb.co.com/RYdbrbd/photorealistic-kid-refugee-camp.jpg",
+      "description": "We’re collecting warm clothing for the underprivileged people in Rajshahi. Please donate to make sure no one has to face the winter cold without proper clothing.",
+      "status": "Ongoing",
+      "contactInfo": "Email: rajshahi@winterdrive.org | Phone: +880 3344 556 677",
+      "division": "Rajshahi"
+    },
+    {
+      "id": 6,
+      "title": "Barishal Winter Help Initiative",
+      "image": "https://i.ibb.co.com/ctmGGF9/medium-shot-volunteers-with-donations.jpg",
+      "description": "Let’s join hands to provide winter relief in Barishal. Your donations of warm clothes, blankets, and other essentials will directly reach the people in need.",
+      "status": "Ongoing",
+      "contactInfo": "Email: barishal@winterdrive.org | Phone: +880 4455 667 788",
+      "division": "Barishal"
+    }
+  ]
+  
