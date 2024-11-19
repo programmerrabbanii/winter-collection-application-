@@ -4,9 +4,10 @@ import { AuthContext } from "../auth/AuthProvider";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import { IoLogoGoogleplus } from "react-icons/io";
 
 const Login = () => {
-  const { signinUser } = useContext(AuthContext); 
+  const { signinUser,loginGoogle } = useContext(AuthContext); 
   const navigate = useNavigate();
   const [passwordError, setPasswordError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -34,6 +35,17 @@ const Login = () => {
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
+  };
+
+  const handleGoogleLogin = () => {
+    loginGoogle()
+      .then(() => {
+        toast.success("Login successful!");
+        navigate("/"); // redirect to home after successful Google login
+      })
+      .catch((error) => {
+        toast.error(`Error: ${error.message}`);
+      });
   };
 
   return (
@@ -84,6 +96,16 @@ const Login = () => {
             </button>
           </div>
         </form>
+
+        <div className="flex items-center justify-center space-x-3">
+          <IoLogoGoogleplus className="text-red-500 text-3xl" />
+          <button
+            onClick={handleGoogleLogin}
+            className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+          >
+            Login With Google  
+          </button> 
+        </div>
 
         <p className="mt-4">
           Don't have an account?{" "}
