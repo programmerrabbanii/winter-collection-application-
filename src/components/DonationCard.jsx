@@ -22,7 +22,7 @@ const DonationCard = ({ donate }) => {
               to={`/donation/${id}`}
               className="btn btn-primary transform transition-all duration-300 hover:scale-105 hover:rotate-2"
             >
-              Details
+             Donate Now
             </Link>
           </div>
         </div>

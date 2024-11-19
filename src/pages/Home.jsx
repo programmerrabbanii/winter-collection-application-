@@ -6,7 +6,6 @@ import ExtraSections from "../components/ExtraSection";
 const Home = () => {
     return (
         <div>
-           <Bannar></Bannar>     
            <About></About>       
            <DonationInfo></DonationInfo>
            <ExtraSections></ExtraSections>

@@ -4,9 +4,10 @@ import navLogo from "../assets/istockphoto-1450747978-612x612.jpg"
 const Header = () => {
     const links=<>
     <li className="ml-2 text-lg font-semibold"><NavLink to="/">Home</NavLink></li>
-    <li className="ml-2 text-lg font-semibold"><NavLink to="/donation">Donation Campaigns</NavLink></li>
+    <li className="ml-2 text-lg font-semibold"><NavLink to="/donation">Donation </NavLink></li>
     <li className="ml-2 text-lg font-semibold"><NavLink to="/help">How To Help</NavLink></li>
     <li className="ml-2 text-lg font-semibold"><NavLink to="/dashboard">dashboard</NavLink></li>
+    {/* <li className="ml-2 text-lg font-semibold"><NavLink to="/login">Login</NavLink></li> */}
     
     </>
   return (
@@ -49,7 +50,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <Link to="/login" className="btn">Login</Link>
         </div>
       </div>
     </div>
