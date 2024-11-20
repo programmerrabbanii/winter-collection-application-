@@ -1,60 +1,70 @@
-import { Link, NavLink } from "react-router-dom";
-import navLogo from "../assets/istockphoto-1450747978-612x612.jpg"
+import navlogo from "../assets/navlogo.jpg";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../auth/AuthProvider";
 
-const Header = () => {
-    const links=<>
-    <li className="ml-2 text-lg font-semibold"><NavLink to="/">Home</NavLink></li>
-    <li className="ml-2 text-lg font-semibold"><NavLink to="/donation">Donation </NavLink></li>
-    <li className="ml-2 text-lg font-semibold"><NavLink to="/help">How To Help</NavLink></li>
-    <li className="ml-2 text-lg font-semibold"><NavLink to="/dashboard">dashboard</NavLink></li>
-    {/* <li className="ml-2 text-lg font-semibold"><NavLink to="/login">Login</NavLink></li> */}
-    
-    </>
+const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+
   return (
-    <div className="static top-0 z-10">
-      <div className="navbar bg-base-100 w-11/12 mx-auto ">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              {
-                links
-              }
-            </ul>
-          </div>
-          <Link to="/"><img className="h-20" src={navLogo} alt="" /></Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            
-               
-               {links} 
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <Link to="/login" className="btn">Login</Link>
-        </div>
+    <div className="navbar bg-base-100 shadow-md px-6 py-4">
+      <div className="navbar-start">
+        <Link to="/" className="text-2xl font-bold text-blue-600">
+          <img className="h-20" src={navlogo} alt="Logo" />
+        </Link>
+      </div>
+
+      <div className="navbar-center">
+        <ul className="flex space-x-6">
+          <li>
+            <Link to="/" className="text-lg">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/donation" className="text-lg">
+              Donation Campaigns
+            </Link>
+          </li>
+          <li>
+            <Link to="/help" className="text-lg">
+              How to Help
+            </Link>
+          </li>
+          <li>
+            <Link to="/dashboard" className="text-lg">
+              Dashboard
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="navbar-end flex items-center space-x-4">
+        {/* User Image */}
+        {user && user.email && (
+          <img
+            className="w-14 h-14 rounded-full"
+            src={user.photoURL}
+            alt="User"
+          />
+        )}
+
+        {/* Login/Logout Button */}
+        {user && user.email ? (
+          <button
+            onClick={logOutUser}
+            className="btn rounded-none bg-black text-white"
+          >
+            Log Out
+          </button>
+        ) : (
+          <Link to="/login" className="btn rounded-none bg-black text-white">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
-}; 
+};
 
-export default Header;
+export default Navbar;

@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const DonationDetails = () => {
     const donation = useLoaderData();
+    console.log(donation);
     const { id, title, image, description, status, contactInfo, division } =
         donation;
 

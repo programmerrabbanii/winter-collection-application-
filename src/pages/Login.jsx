@@ -13,13 +13,12 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false); 
 
-  const handleLogin = (e) => {
+  const handleLogin = (e) => { 
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     
-    setLoading(true); // Set loading to true when login starts
-
+    setLoading(true);
     signinUser(email, password)
       .then(() => {
         toast.success("Login successful!");
@@ -29,7 +28,7 @@ const Login = () => {
         toast.error(`Error: ${error.message}`);
       })
       .finally(() => {
-        setLoading(false); // Set loading to false after login attempt
+        setLoading(false); 
       });
   };
 
@@ -41,7 +40,7 @@ const Login = () => {
     loginGoogle()
       .then(() => {
         toast.success("Login successful!");
-        navigate("/"); // redirect to home after successful Google login
+        navigate("/"); 
       })
       .catch((error) => {
         toast.error(`Error: ${error.message}`);

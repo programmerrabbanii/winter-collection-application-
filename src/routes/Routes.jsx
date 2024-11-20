@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard";
 import DonationDetails from "../components/DonationDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Private from "./Private";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/donation/:id",
-        element: <DonationDetails></DonationDetails>,
+        element: <Private><DonationDetails></DonationDetails>,</Private>,
         loader: async ({ params }) => {
           const response = await fetch("/donations.json");
           const data = await response.json();

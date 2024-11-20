@@ -3,6 +3,7 @@ import DonationCard from "../components/DonationCard";
 
 const Donation = () => {
     const allDontions=useLoaderData()
+    console.log(allDontions);
     return (
         <div className="w-11/12 mx-auto mt-10">
             <h3 className="text-4xl font-semibold py-4 text-center mb-7"> Donation Campaigns</h3>

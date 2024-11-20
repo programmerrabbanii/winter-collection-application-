@@ -7,8 +7,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { IoLogoGoogleplus } from "react-icons/io";
 
 const Register = () => {
-  const { createUser, loginGoogle } = useContext(AuthContext);
-  const navigate = useNavigate(); // for navigation
+  const { createUser, loginGoogle, setUser,updateUserProfile } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [passwordError, setPasswordError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
@@ -18,7 +18,8 @@ const Register = () => {
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
-
+  
+    // Password validation
     if (!/[A-Z]/.test(password)) {
       setPasswordError("Password must include at least one uppercase letter.");
       return;
@@ -31,16 +32,30 @@ const Register = () => {
     } else {
       setPasswordError("");
     }
-
-    createUser(email, password, { name, photo })
-      .then(() => {
-        toast.success("Registration successful!");
-        navigate("/login");
+  
+    // User registration
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        // Update user profile
+        updateUserProfile({
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            setUser(user); // Set updated user
+            toast.success("Registration successful!");
+            navigate("/login");
+          })
+          .catch((updateError) => {
+            toast.error(`Profile update error: ${updateError.message}`);
+          });
       })
       .catch((error) => {
         toast.error(`Error: ${error.message}`);
       });
   };
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -50,7 +65,7 @@ const Register = () => {
     loginGoogle()
       .then(() => {
         toast.success("Login successful!");
-        navigate("/"); // redirect to home after successful Google login
+        navigate("/");
       })
       .catch((error) => {
         toast.error(`Error: ${error.message}`);
@@ -118,7 +133,10 @@ const Register = () => {
           </div>
 
           <div className="form-control">
-            <button type="submit" className="btn btn-primary w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+            <button
+              type="submit"
+              className="btn btn-primary w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+            >
               Register
             </button>
           </div>
