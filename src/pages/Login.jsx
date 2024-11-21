@@ -82,7 +82,7 @@ const Login = () => {
                 className="absolute right-3 top-3 cursor-pointer"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />} 
-              </span>
+              </span> 
             </div>
             {passwordError && (
               <p className="text-red-500 text-sm mt-1">{passwordError}</p>
@@ -90,7 +90,7 @@ const Login = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className=" rounded-sm text-lg bg-orange-300 text-white py-3">
               {loading ? "Logging in..." : "Login"} 
             </button>
           </div>
@@ -100,7 +100,7 @@ const Login = () => {
           <IoLogoGoogleplus className="text-red-500 text-3xl" />
           <button
             onClick={handleGoogleLogin}
-            className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+            className="bg-orange-300 text-white py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
           >
             Login With Google  
           </button> 

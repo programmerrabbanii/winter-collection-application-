@@ -20,7 +20,7 @@ const DonationCard = ({ donate }) => {
           <div className="card-actions justify-end mt-4">
             <Link
               to={`/donation/${id}`}
-              className="btn btn-primary transform transition-all duration-300 hover:scale-105 hover:rotate-2"
+              className=" py-2 px-6 rounded-sm text-lg btn-primary bg-orange-300 text-white transform transition-all duration-300  hover:rotate-2"
             >
              Donate Now
             </Link>

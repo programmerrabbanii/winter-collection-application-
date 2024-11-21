@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import aboutPhoto from "../assets/OWC-1200x760.jpeg";
 
 const About = () => {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12"data-aos="fade-right">
       <h2 className="text-3xl font-semibold text-center mb-8">About</h2>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
@@ -37,7 +38,7 @@ const About = () => {
               the warmth and support they deserve.
             </p>
 
-            <button className="btn btn-primary">Get Started</button>
+            <Link to="/donation" className="py-2 px-6 text-white text-lg rounded-sm bg-orange-300">Donation Now</Link>
           </div>
         </div>
       </div>

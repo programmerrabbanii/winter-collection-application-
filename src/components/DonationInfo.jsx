@@ -1,5 +1,6 @@
 const DonationInfo = () => {
     return (
+      
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-4">
          
@@ -10,7 +11,7 @@ const DonationInfo = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            <div className="bg-white p-6 shadow-md rounded-md">
+            <div className="bg-white p-6 shadow-md rounded-md"  data-aos="flip-left">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 How to Donate
               </h3>
@@ -25,7 +26,7 @@ const DonationInfo = () => {
             </div>
   
             
-            <div className="bg-white p-6 shadow-md rounded-md">
+            <div className="bg-white p-6 shadow-md rounded-md data-aos=flip-left">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 Collection Points
               </h3>
@@ -47,7 +48,7 @@ const DonationInfo = () => {
                     key={index}
                     className="flex items-center gap-2 text-gray-600"
                   >
-                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-orange-300 rounded-full"></span>
                     {point}
                   </li>
                 ))}
@@ -55,7 +56,7 @@ const DonationInfo = () => {
             </div>
   
            
-            <div className="bg-white p-6 shadow-md rounded-md">
+            <div className="bg-white p-6 shadow-md rounded-md"  data-aos="flip-left">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 Supported Divisions
               </h3>
@@ -89,4 +90,7 @@ const DonationInfo = () => {
   };
   
   export default DonationInfo;
+
+
+  
   

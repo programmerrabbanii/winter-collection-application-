@@ -14,26 +14,26 @@ const Footer = () => {
             <p>Address: Dhaka, Bangladesh</p>
           </div>
 
-          {/* Social Media Links */}
+          
           <div>
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-xl font-semibold mb-4">Our Social Media Links</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-400 flex items-center">
-                <FaFacebookF className="mr-2" /> Facebook
+              <a href="#" className="hover:text-orange-300 flex items-center">
+                <FaFacebookF className="mr-2" /> 
               </a>
-              <a href="#" className="hover:text-blue-400 flex items-center">
-                <FaTwitter className="mr-2" /> Twitter
+              <a href="#" className="hover:text-orange-300 flex items-center">
+                <FaTwitter className="mr-2" /> 
               </a>
-              <a href="#" className="hover:text-blue-400 flex items-center">
-                <FaInstagram className="mr-2" /> Instagram
+              <a href="#" className="hover:text-orange-300 flex items-center">
+                <FaInstagram className="mr-2" /> 
               </a>
-              <a href="#" className="hover:text-blue-400 flex items-center">
-                <FaLinkedinIn className="mr-2" /> LinkedIn
+              <a href="#" className="hover:text-orange-300 flex items-center">
+                <FaLinkedinIn className="mr-2" /> 
               </a>
             </div>
           </div>
 
-          {/* Newsletter Subscription */}
+         
           <div>
             <h3 className="text-xl font-semibold mb-4">Subscribe to Newsletter</h3>
             <p>Stay updated with our latest news and events.</p>
@@ -43,15 +43,15 @@ const Footer = () => {
                 placeholder="Your email"
                 className="p-2 w-full rounded-md mb-2"
               />
-              <button className="btn btn-primary w-full">Subscribe</button>
+              <button className="btn bg-orange-300 w-full">Subscribe</button>
             </form>
           </div>
         </div>
 
-        {/* Divider */}
+
         <div className="border-t border-gray-700 mt-6"></div>
 
-        {/* Bottom Section */}
+       
         <div className="flex flex-col md:flex-row justify-between items-center mt-4">
           <p>&copy; 2024 Winter Clothing Initiative. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">

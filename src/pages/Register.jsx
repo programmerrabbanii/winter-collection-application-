@@ -135,7 +135,7 @@ const Register = () => {
           <div className="form-control">
             <button
               type="submit"
-              className="btn btn-primary w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+              className=" text-lg w-full p-3 bg-orange-300 text-white rounded-lg  transition duration-300"
             >
               Register
             </button>
@@ -152,7 +152,7 @@ const Register = () => {
           <IoLogoGoogleplus className="text-red-500 text-3xl" />
           <button
             onClick={handleGoogleLogin}
-            className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+            className="bg-orange-300 text-white py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
           >
             Login With Google
           </button>

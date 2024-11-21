@@ -87,7 +87,7 @@ const DonationDetails = () => {
                 </div>
                 <button
                     type="submit"
-                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                    className="bg-orange-300 text-white py-2 px-4 rounded"
                 >
                     Submit Donation
                 </button>
