@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
  
 const Bannar = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Animation duration set to 1 second
+    AOS.init({ duration: 1000 }); 
   }, []);
  
   return (
@@ -32,7 +32,7 @@ const Bannar = () => {
             </p>
             <Link
               to="/donation"
-              className="py-2 px-6 rounded-sm bg-orange-300 text-white text-lg"
+              className="py-2 px-6 rounded-sm bg-orange-300 text-white" 
             >
               Donate Now
             </Link>
