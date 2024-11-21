@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const DonationDetails = () => {
     const donation = useLoaderData();
-    console.log(donation);
+    // console.log(donation);
     const { id, title, image, description, status, contactInfo, division } =
         donation;
 
@@ -40,7 +40,7 @@ const DonationDetails = () => {
                 <h3 className="text-xl font-semibold">Donation Form</h3>
                 <div className="mb-4">
                     <label htmlFor="quantity" className="block mb-2">
-                        Quantity of items
+                        Quantity of item
                     </label>
                     <input
                         type="number"
@@ -52,7 +52,7 @@ const DonationDetails = () => {
                 </div>
                 <div className="mb-4">
                     <label htmlFor="itemType" className="block mb-2">
-                        Item Type
+                        Item Types
                     </label>
                     <input
                         type="text"
