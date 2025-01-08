@@ -61,8 +61,9 @@ const Navbar = () => {
           )}
         </ul>
       </div>
+      
 
-      <div className="navbar-end flex items-center space-x-4">
+      <div className="navbar-end flex items-center space-x-3">
         {user && user.email && (
           <img
             className="w-14 h-14 rounded-full"
@@ -83,7 +84,7 @@ const Navbar = () => {
             Login
           </Link>
         )}
-
+        
         {/* Hamburger Menu */}
         <button
           className="lg:hidden text-xl"
